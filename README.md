@@ -7,7 +7,7 @@ This repository contains the datasets and MATLAB scripts used to reproduce the r
   - Federal Center for Technological Education Celso Suckow da Fonseca (CEFET/RJ), Brazil
   - Contact: `guilherme.alves@cefet-rj.br`
 - João Alberto Passos Filho
-  – Federal University of Juiz de Fora (UFJF), Brazil
+  - Federal University of Juiz de Fora (UFJF), Brazil
   - Contact: `joao.passos@ufjf.br`
   
 ---
@@ -31,10 +31,8 @@ Inside each test system folder, there are 5 subfolders corresponding to each SSR
 
 Each limit folder contains the following files:
 
-- `data_xbus_limit.xlsx` – Training dataset for the respective SSR limit.  
-  - `x` is the number of buses in the system (9 or 39).  
-  - `limit` is one of: `mvar`, `mw`, `security`, `thermal`, `voltage`.  
-- `load_curve_xbus_limit.xlsx` - Load curve data for SSR estimation according to the limit.  
+- Spreadsheet containing the training dataset for the respective SSR limit.
+- Spreadsheet containing the load curve data for SSR estimation according to the limit.  
 - `bayesian_search.m` – Finds the best neural network architecture using **Bayesian search** (number of hidden layers and neurons per layer).  
 - `training_rna.m` – Trains the neural network with the training data.  
   > You must manually update the results according to the architecture found by the Bayesian search (line 36) if you wish to use or find a configuration different from the one presented in the paper (default).  
@@ -59,6 +57,13 @@ To plot the full SSR:
 
 ## 📝 Descriptive Files
 
-- `data_load_curves_columns_description.txt` – Explains each column of `load_curve_xbus_limit.xlsx`.
-- `data_training_columns_description.txt` – Explains each column of `data_xbus_limit.xlsx`.
+- `data_training_columns_description.txt` – Explain each column in the spreadsheet that contains the training dataset.
+- `data_load_curves_columns_description.txt` –  Explain each column in the spreadsheet that contains the load curve data.
+
+---
+
+## 🖥️ Requirements
+
+- MATLAB (tested on version R2018a)
+- Excel or compatible software for .xlsx files
 
