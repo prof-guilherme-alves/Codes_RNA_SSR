@@ -1,0 +1,25 @@
+Description of the columns of the load curve data files
+
+- Hora: Load curve time (for identification only)
+
+Input Variables:
+
+- Fator: Load scaling factor applied to the nominal system load (e.g., 0.70 to 1.00)
+- G1: Active power generation of generator group 1 
+- G2: Active power generation of generator group 2  
+- G3: Active power generation of generator group 3  
+- Pd: Total active load of the system  
+- Qd: Total reactive load of the system  
+
+Output Variables – SSR boundary coordinates:
+
+These are grouped by generator group (G1, G2, G3), and each group has 8 coordinates representing the boundary of the Static Security Region (SSR) under a specific security limit (e.g., Reactive Power Limit, Voltage Limit, etc.).
+
+- G11 to G18: 8 SSR coordinates for Generator Group 1
+- G21 to G28: 8 SSR coordinates for Generator Group 2
+- G31 to G38: 8 SSR coordinates for Generator Group 3
+
+Each row of the dataset corresponds to a time of the daily load curve (system operating point), and the output columns define the boundary of the SSR for that point.
+
+
+
